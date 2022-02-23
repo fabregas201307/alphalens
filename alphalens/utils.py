@@ -592,7 +592,7 @@ def get_clean_factor(factor,
 
     factor_copy = factor.copy()
     factor_copy.index = factor_copy.index.rename(['date', 'asset'])
-    factor_copy = factor_copy[np.isfinite(factor_copy)]
+    # factor_copy = factor_copy[np.isfinite(factor_copy)]
 
     merged_data = forward_returns.copy()
     merged_data['factor'] = factor_copy
